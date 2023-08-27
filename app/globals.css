@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  @apply text-gray-800;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.navbar {
+  @apply container mx-auto h-[60px] md:h-[84px] flex justify-between items-center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav_menu_con {
+  @apply hidden md:flex gap-10 items-center;
+}
+
+.mobile_nav_menu_con {
+  @apply w-full h-[calc(100%-60px)] md:hidden bg-[#f6f6f6];
+}
+
+.nav_menu {
+  @apply flex items-center gap-5;
+}
+
+.nav_menu li {
+  @apply cursor-pointer;
+}
+
+/* text gradient  */
+.text-gradient {
+  background: linear-gradient(133deg, #c41740 0%, #ea9c28 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.h1 {
+  line-height: 120%;
+  letter-spacing: -2.28px;
+  @apply text-[28px] md:text-[46px] lg:text-[76px] font-bold text-center;
 }

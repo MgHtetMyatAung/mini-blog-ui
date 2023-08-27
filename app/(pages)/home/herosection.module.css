@@ -1,0 +1,9 @@
+.hero_container {
+  @apply bg-gray-100 pt-[60px] md:pt-[80px] lg:pt-[120px] pb-[40px] md:pb-[60px] lg:pb-[80px];
+}
+
+.h1 {
+  line-height: 120%;
+  letter-spacing: -2.28px;
+  @apply text-[28px] md:text-[46px] lg:text-[76px] font-bold text-center;
+}
